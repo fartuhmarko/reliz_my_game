@@ -10,16 +10,15 @@ class Button:
 
 
         font.init()
-        font1 = font.Font(None, 20)
+        self.font1 = font.Font(None, 20)
    
     def reset(self):
-        draw.rect(window, (255,255,255), rect.Rect(self.x, self.y, self_width, self_height))  
+        draw.rect(self.window, (255,255,255), rect.Rect(self.x, self.y, self.width, self.height))  
         self.window.blit(self.font1.render("Exit", True,(0,0,0)),(100,100))
 
-        mouse = mouse.get_pos()
     def click(self):
         mouse1 = mouse.get_pos()
-        if mouse[0] >= self.x and mouse1[0]<= self.x + self_width and mouse1[1]
+        if mouse1[0] >= self.x and mouse1[0] <= self.x + self.width and mouse1[1] >= self.y and mouse1[1] <= self.y + self.height:
             print(mouse1)
 
 
