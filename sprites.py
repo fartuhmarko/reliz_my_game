@@ -26,7 +26,7 @@ class Hero(Sprite):
             self.rect.y -= self.speed
         if keys[pygame.K_s] and self.rect.y <620:
             self.rect.y += self.speed
-
+    
         
         
 
